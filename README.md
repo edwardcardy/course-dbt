@@ -11,10 +11,10 @@ Apache 2.0
 
 1. How many users do we have?
 
-``
+```
 SELECT COUNT(DISTINCT user_id)
 from dbt_edward_c.stg_orders
-``
+```
 
 Answer: 130
 
@@ -39,17 +39,17 @@ Answer: 7.52
 
 3. On average, how long does an order take from being placed to being delivered?
 
-``
+```
 SELECT avg(delivered_at - created_at) AS avg_delivery_time
 FROM dbt_edward_c.stg_orders
-``
+```
 
 Answer: 3 days, 21 hours, 24 mins
 
 
 4. How many users have only made one purchase? Two purchases? Three+ purchases?
 
-``
+```
 with opu AS (
 select user_id
    , count(1) AS orders_per_user
@@ -63,7 +63,7 @@ SELECT CASE WHEN orders_per_user IN(1,2) THEN CAST(orders_per_user AS char)
 from opu
 GROUP BY 1
 ORDER BY 1
-``
+```
 
 Answer: 
 
@@ -76,7 +76,7 @@ count_orders	count_users
 
 5. On average, how many unique sessions do we have per hour?
 
-``
+```
 WITH hourly_sessions AS (
 SELECT date_trunc('hour', created_at) AS session_hour
     , COUNT(DISTINCT session_id) AS sessions
@@ -86,6 +86,6 @@ group by 1
 
 SELECT avg(sessions) AS avg_hourly_sessions
 FROM hourly_sessions
-``
+```
 
 Answer: 16.33
