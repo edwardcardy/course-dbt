@@ -7,3 +7,13 @@ Template repository for the projects and environment of the course: Analytics en
 ## License
 
 Apache 2.0
+
+
+1. How many users do we have?
+
+``
+SELECT COUNT(DISTINCT user_id)
+from dbt_edward_c.stg_orders
+``
+
+Answer: 130
