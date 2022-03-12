@@ -67,10 +67,11 @@ ORDER BY 1
 
 Answer: 
 
-count_orders	count_users
-1	       | 25
-2	       | 28
-3+       | 71
+| # orders | # users |
+|----------|---------|
+| 1        | 25      |
+| 2        | 28      |
+| 3+       | 71      |
 
 
 
