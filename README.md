@@ -20,7 +20,7 @@ Answer: 130
 
 2. On average, how many orders do we receive per hour?
 
-``
+```
 with hourly_orders AS (
 select date_trunc('hour', created_at) AS created_hour
      , count(1) as orders 
@@ -33,7 +33,7 @@ SELECT sum(orders) AS total_orders
     , count(1) AS total_hours
     , sum(orders) / count(1) AS avg_hourly_orders
 from hourly_orders
-``
+```
 
 Answer: 7.52
 
