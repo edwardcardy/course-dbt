@@ -13,7 +13,7 @@ u.phone_number,
 u.signup_date,
 u.updated_date,
 u.address_id,
-ad.street_address,
+ad.address,
 ad.zipcode,
 ad.state,
 ad.country
