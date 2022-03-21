@@ -17,7 +17,7 @@ order_facts as (
     sum(case when promo_id is not null then 1 else 0 end) as count_promo_orders
     from orders
     group by 1
-),
+)
 
 
     select 
