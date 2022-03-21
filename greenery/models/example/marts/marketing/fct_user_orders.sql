@@ -13,7 +13,7 @@ order_facts as (
     count(order_id) as count_orders,
     sum(order_total) as total_order_spend,
     min(order_date) as first_order_date,
-    max(order_date) as latest_order_date,
+    max(order_date) as last_order_date,
     sum(case when promo_id is not null then 1 else 0 end) as count_promo_orders
     from orders
     group by 1
