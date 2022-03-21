@@ -21,7 +21,7 @@ order_facts as (
 
 
     select 
-        u.*
+        u.*,
         o.count_orders,
         o.total_order_spend,
         o.first_order_date,
