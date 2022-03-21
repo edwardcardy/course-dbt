@@ -19,4 +19,4 @@ ad.state,
 ad.country
 FROM {{ref('stg_users')}} u
 LEFT JOIN {{ ref('stg_addresses') }} ad
-  ON u.address_guid = ad.address_guid
+  ON u.address_id = ad.address_id
