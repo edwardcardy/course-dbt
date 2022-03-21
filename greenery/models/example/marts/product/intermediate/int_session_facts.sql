@@ -6,7 +6,7 @@
 }}
 
 with events as (
-    select * from {{ ref('fct_events') }}
+    select * from {{ ref('stg_events') }}
 )
 
 select
