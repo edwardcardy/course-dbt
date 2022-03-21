@@ -3,7 +3,7 @@
 with events as (
     select *
     from {{ ref('stg_events') }}
-),
+)
 
 
 
@@ -13,7 +13,7 @@ with events as (
         count(distinct session_id) as num_sessions,
         min(created_at) as first_viewed_at,
         max(created_at) as last_viewed_at
-        from events
+    from events
     group by 1
 
 
