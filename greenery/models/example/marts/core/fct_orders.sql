@@ -18,7 +18,6 @@ o.shipping_service,
 o.estimated_delivery_date,
 o.deliery_date,
 o.order_status,
-p.promo_id,
 p.discount,
 p.promo_status
 

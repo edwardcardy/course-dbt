@@ -12,7 +12,7 @@ u.email,
 u.phone_number,
 u.signup_date,
 u.updated_date,
-u.address_id
+u.address_id,
 ad.address_guid,
 ad.street_address,
 ad.zipcode,
