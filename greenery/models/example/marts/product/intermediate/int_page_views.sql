@@ -11,8 +11,8 @@ with events as (
         page_url,
         count(event_id) as num_events,
         count(distinct session_id) as num_sessions,
-        min(created_at) as first_viewed_at,
-        max(created_at) as last_viewed_at
+        min(event_created_date) as first_event_created_date,
+        max(event_created_date) as last_event_created_date
     from events
     group by 1
 
