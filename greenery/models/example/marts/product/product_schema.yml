@@ -8,3 +8,10 @@ models:
         tests:
           - not_null
           - unique
+  - name: fct_page_views
+    description: Information on page views
+    columns:
+      - name: pageurl
+        tests:
+          - not_null
+          - unique
