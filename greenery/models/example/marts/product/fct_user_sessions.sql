@@ -15,5 +15,13 @@ with session_facts as (
 
 select
     sf.*,
-    u.*
-from events
+    first_name,
+    last_name,
+    email,
+    phone_number,
+    signup_date,
+    updated_date,
+    address_id
+from session_facts sf
+left join users u
+    on sf.user_id = u.user_id
