@@ -6,7 +6,7 @@
 
 SELECT
 product_id,
-name,
+product_name,
 price,
 inventory
 FROM {{ref('stg_products')}} p
