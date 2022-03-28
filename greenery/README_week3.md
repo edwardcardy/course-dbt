@@ -5,7 +5,7 @@ select COUNT(DISTINCT session_id) AS total_sessions
      , COUNT(DISTINCT CASE WHEN event_type = 'checkout' THEN session_id END) AS conversions
      , 1.0 * COUNT(DISTINCT CASE WHEN event_type = 'checkout' THEN session_id END) / COUNT(DISTINCT session_id)  AS conversion_rate
 FROM dbt_edward_c.fct_events
-     ```
+```
 
 Answer: 62.5%
 
@@ -16,8 +16,6 @@ select product_name
     , COUNT(DISTINCT CASE WHEN event_type = 'page_view' THEN e.session_id END) AS total_product_page_view_sessions
     , COUNT(DISTINCT CASE WHEN event_type = 'add_to_cart' THEN e.session_id END) AS total_product_purchase_sessions
     , 1.0 * COUNT(DISTINCT CASE WHEN event_type = 'add_to_cart' THEN e.session_id END) / COUNT(DISTINCT CASE WHEN event_type = 'page_view' THEN e.session_id END)  AS conversion_rate
-
-
 FROM dbt_edward_c.fct_events e
 JOIN dbt_edward_c.dim_products p
   ON e.product_id = p.product_id
