@@ -4,7 +4,7 @@
   )
 }}
 
-{% set products = dbt_utils.get_column_values(table=ref('stg_products'), column='product_name') %}
+{% set products = dbt_utils.get_column_values(table=ref('stg_products'), column='product_name_nospaces') %}
 
 
 with users as (
