@@ -37,7 +37,7 @@ order_facts as (
 
     from orders o
     group by 1
-)
+),
 
 order_item_facts AS (
 SELECT user_id,
