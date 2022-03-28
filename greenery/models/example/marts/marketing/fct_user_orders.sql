@@ -67,7 +67,7 @@ GROUP BY 1
         o.total_order_spend,
         o.first_order_date,
         o.last_order_date,
-        count_promo_orders,
+        count_promo_orders
 
 
     from order_facts o
