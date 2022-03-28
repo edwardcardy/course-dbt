@@ -11,7 +11,7 @@ models:
   - name: fct_page_views
     description: Information on page views
     columns:
-      - name: pageurl
+      - name: page_url
         tests:
           - not_null
           - unique
