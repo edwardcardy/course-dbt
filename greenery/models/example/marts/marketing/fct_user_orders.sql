@@ -55,13 +55,20 @@ GROUP BY 1
 
 
     select 
-        u.*,
+        oif.*,
+        u.first_name,
+        u.last_name,
+        u.email,
+        u.phone_number,
+        u.signup_date,
+        u.updated_date,
+        u.address_id,
         o.count_orders,
         o.total_order_spend,
         o.first_order_date,
         o.last_order_date,
         count_promo_orders,
-        oif.*
+
 
     from order_facts o
     left join users u
