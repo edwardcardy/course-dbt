@@ -50,6 +50,7 @@ JOIN order_items oi
     ON o.order_id = oi.order_id
 JOIN products p
     ON oi.product_id = p.product_id
+GROUP BY 1
 )
 
 
